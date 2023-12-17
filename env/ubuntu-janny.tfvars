@@ -1,9 +1,7 @@
 ##############################
 # Proxmox Virtual Environment
 ##############################
-#pve_endpoint = "https://192.168.1.95:8006/"
-#pve_user = "root@pam"
-#pve_host_name   = "pm1.home.local"
+# See the README.md for settings.
 
 ##############################
 # Template specifics
