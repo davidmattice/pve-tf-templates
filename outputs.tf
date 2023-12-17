@@ -1,24 +1,24 @@
-#output "data_stores" {
-#    value = data.proxmox_virtual_environment_datastores.first_node
-#}
-
 output "template" {
-    value = data.proxmox_virtual_environment_vms.template
+    description = "Full configuration of the created template."
+    value       = module.template.template
 }
-#output "vms" {
-#    value = format("Tempalte being use is: %s", local.template_name)
-#}
 
-#output "virtual_machines" {
-#    value = module.virtual_machines
-#}
+output "nodes" {
+    description = "List of PVE nodes in the cluster pointed to by the PROXMOX Endpoint."
+    value       = module.template.nodes
+}
 
-#output "user_data" {
-#    description = "File used for user_data"
-#    value       = local.user_data_file
-#}
+output "datastores" {
+    description = "List of datastores found on the PVE node."
+    value       = module.template.datastores
+}
 
-#output "Vendor_config" {
-#    description = "File used for vendor config"
-#    value = local.vendor_config_file
-#}
+output "dns" {
+    description = "DNS configuration of the PVE node."
+    value       = module.template.dns
+}
+
+output "image" {
+    description = "Details of the ISO image used to create the template."
+    value       = module.template.image
+}
