@@ -2,7 +2,7 @@
 # Just call the module! 
 ##############################
 module "template" {
-  source    = "git::https://github.com/davidmattice/pve-tfm-template?ref=simplify"
+  source    = "git::https://github.com/davidmattice/pve-tfm-template?ref=v0.1.0"
   providers = {
     proxmox = proxmox
   }
